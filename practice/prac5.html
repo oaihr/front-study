@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <h1>나의 점심 취향 설문조사</h1>
+        이름 : <input type="text"><br><br>
+        <fieldset>
+            <legend>학년 선택</legend>
+            <table>
+                <tr>
+                    <th>번호</th>
+                    <th>학년</th>
+                    <th>선택</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><label for="1">1학년</label></td>
+                    <td><input type="radio" name="grade" id="1"></td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td><label for="2">2학년</label></td>
+                    <td><input type="radio" name="grade" id="2"></td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td><label for="3">3학년</label></td>
+                    <td><input type="radio" name="grade" id="3"></td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td><label for="4">4학년</label></td>
+                    <td><input type="radio" name="grade" id="4"></td>
+                </tr>
+            </table>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>좋아하는 음식 (복수 선택 가능)</legend>
+            <input type="checkbox" id="korean">     <label for="korean">한식</label><br>
+            <input type="checkbox" id="chinese">    <label for="chinese">중식</label><br>
+            <input type="checkbox" id="japanese">   <label for="japanese">일식</label><br>
+            <input type="checkbox" id="western">    <label for="western">양식</label><br>
+            <input type="checkbox" id="snack">      <label for="snack">분식</label><br>
+        </fieldset>
+        <br>
+        <input type="submit" value="제출하기">
+    </form>
+</body>
+</html>
