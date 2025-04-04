@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 그룹 선택자 */
+        p, strong {color:red;}
+        
+        /* 자식 선택자    (직계 자식 관계만 적용) */
+        /* .top-div > p {color:blue;} */
+
+        /* 하위 선택자 */
+        /*
+        .top-div p {color:blue;}
+
+        .top-div span {color:green;} */
+
+        /* 인접 형제 선택자 (바로 위아래로 붙어있어야함) */
+        /* p + span {color:orange;} */
+
+        /* 일반 형제 선택자 */
+        p ~ span {color:orange;}
+
+        /* 가상 요소 선택자 */
+        #vr-p::before {
+            content:"...";
+            color:aqua;
+        }
+        #vr-p::after{
+            content:"abcd";
+            color:blueviolet;
+        }
+        
+        /* 가상 클래스 선택자 */
+        a:link{color:chartreuse;}
+        a:visited{color:crimson;}
+
+        a:hover{color:blue;}
+        a:active{color:cyan;}
+
+        input:focus{color:red;}
+        input:disabled{color:blueviolet;}
+
+        .chek:checked + span{
+            color:rgb(255, 0, 0);
+        }
+        .chek:checked + label{
+            color:rgb(25, 100, 100);
+        }
+    </style>
+</head>
+<body>
+    <div class="top-div">
+        <p>p1</p>
+        <p>p2</p>
+        <span>span1</span>
+        <span>span2</span>
+
+        <div>
+            <p>p3</p>
+            <p id="vr-p">p4</p>
+            <strong>strong</strong>
+            <span>span3</span>
+        </div>
+
+        <div>
+            <strong>strong2</strong>
+            <span>span4</span>
+        </div>
+    </div>
+
+    <p>p5</p>
+
+    <a href="https://www.arteorafa-licciardello.it/en/">arte</a>
+    <a href="https://sgsg.hankyung.com/article/2025032848741">한경</a>
+    
+    <br><br>
+
+    <input type="text" value="input1 value"> <br>
+    <input type="text" value="input1 value" disabled> <br>
+    <br>
+
+    <input type="checkbox" class="chek"><span>등교</span><br>
+    <input type="checkbox" class="chek"><span>하교</span><br>
+
+    <input type="checkbox" class="chek" id="retire"><label for="retire">조퇴</label><br>
+
+</body>
+</html>
