@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 500px;
+            margin: 0 auto;
+            margin-top: 50px;
+            text-align: center;
+        }
+        .red-box{
+            background-color: red;
+            width: 250px;
+            height: 100px;
+            float: left;
+        }
+        .green-box{
+            background-color: green;
+            width: 250px;
+            height: 100px;
+            float: right;
+        }
+        /* .text{
+            float: left;
+        } */
+        .blue-box{
+            background-color: blue;
+            width: 500px;
+            height: 200px;
+            float: left;
+        }
+        /* .container::after{
+            display: block;           container의 float 요소들이 공간을 갖게 처리하고 싶으면 
+            content: "";              가상요소선택자로 float clear 이용
+            clear: both;
+        } */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="red-box"></div>
+        <div class="green-box"></div>
+        <div class="text">글자가운데정렬</div>
+        <div class="blue-box"></div>
+    </div>
+</body>
+</html>
