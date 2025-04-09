@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            border: 2px solid blue;
+            background-image: url(../../images/ocean2.jpg);
+
+            transition-property: border, width, height;
+            transition-duration: 2s;
+            /* div에 transition을 걸어야 
+                    마우스를 올릴때 transition이 일어나고 
+                    마우스를 내릴때'도' transition이 일어남
+                div:hover에 transition을 걸면 마우스를 떼면 div가 바로 축소됨!! 
+            */
+        }
+        div:hover {
+            width: 600px;
+            height: 600px;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
