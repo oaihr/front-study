@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            display: flex;
+            background-color: lightgray;
+            flex-direction: column;
+            
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            transition-property: all;      /*transition이 되는 애들한테 transition 속성을 걸어야한다..*/
+            transition-duration: 2s;
+        }
+        .box2{
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            transition-property: all;
+            transition-duration: 0s;
+        }
+        .red-blue-black{
+            display: flex;
+            flex-direction: column;
+        }        
+        .green-yellow{
+            display: flex;
+        }
+        
+        .container:hover .red{
+            width: 400px;
+        }
+        .container:hover .blue{
+            background-color: purple;
+        }
+        .container:hover .black{
+            transform: translate(200px);
+        }
+        
+        .red{
+            background-color: red;
+        }
+        .blue{
+            background-color: blue;
+        }
+        .black{
+            background-color: black;
+        }
+        .green{
+            background-color: green;
+        }        
+        .yellow{
+            background-color: yellow;
+        }
+
+        .green:hover{
+            border: 10px solid red;
+        }
+        .yellow:hover{
+            border: 10px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="red-blue-black">
+            <div class="box red"></div>
+            <div class="box blue"></div>
+            <div class="box black"></div>
+        </div>    
+        <div class="green-yellow">
+            <div class="box2 green"></div>
+            <div class="box2 yellow"></div>
+        </div>
+    </div>
+</body>
+</html>
