@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            
+        }
+        .container{
+            display: flex;
+            flex-direction: column;            
+            width: 800px;
+            margin: 0 auto;
+        }
+        .first-row-box{
+            display: flex;
+        }
+        .first-left{
+            width: 400px;
+            height: 100px;
+            background-color: yellow;
+        }
+        .first-right{
+            width: 400px;
+            height: 100px;
+            background-color: orange;
+        }
+        
+        .second-row-box{
+            width: 800px;
+            height: 100px;
+            background-color: violet;
+        }
+
+        .third-row-box{
+            width: 800px;
+            height: 200px;
+            display: flex;
+        }
+        .third-left{
+            width: 30%;
+            height: 200px;
+            background-color: lightblue;
+        }
+        .third-right{
+            width: 70%;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+        }
+        .third-right-top{
+            height: 100px;
+            background-color: blue;
+        }
+        .third-right-bottom{
+            height: 100px;
+            background-color: red;
+        }
+
+        .fourth-row-box{
+            display: flex;
+        }
+        .fourth-item1{
+            width: 200px;
+            height: 100px;
+            background-color: green;
+        }
+        .fourth-item2{
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+        }
+        .fourth-item3{
+            width: 200px;
+            height: 100px;
+            background-color: lightseagreen;
+        }
+        .fourth-item4{
+            width: 200px;
+            height: 100px;
+            background-color: lightcoral;
+        }
+        .border{
+            border: 1px solid black;
+        }
+        .item-box1{
+            display: flex;
+        }
+        .item-box2{
+            display: flex;
+        }
+
+        @media screen and (max-width:700px){
+            .container{ width: 100%;}
+        }
+        @media screen and (max-width:650px){
+            .fourth-row-box{
+                flex-direction: column;
+            }
+            .fourth-item1, .fourth-item2{ 
+                width: 50%;
+            }
+            .fourth-item3, .fourth-item4{ 
+                width: 50%;
+            }
+        }
+        @media screen and (max-width:500px){
+            .first-row-box{
+                flex-direction: column;
+            }
+            .first-left, .first-right{
+                width: 100%;
+            }
+            .third-row-box{
+                flex-direction: column;
+                width: 100%;                
+            }
+            .third-left{
+                width: 100%;
+            }
+            .third-right{
+                width: 100%;
+                flex-direction: row;
+            }
+            .third-right-top, .third-right-bottom{
+                width: 50%;
+            }
+        }
+        @media screen and (max-width:350px){
+            
+            .third-right{
+                flex-direction: column;    
+            }
+            .third-right-top, .third-right-bottom{
+                width: 100%;
+            }           
+            .item-box1{
+                flex-direction: column;
+            }
+            .item-box2{
+                flex-direction: column;        
+            }
+            .fourth-item1, .fourth-item2, .fourth-item3, .fourth-item4{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container border">
+        <div class="first-row-box">
+            <div class="first-left border"></div>
+            <div class="first-right border"></div>
+        </div>
+        <div class="second-row-box border"></div>
+        <div class="third-row-box">
+            <div class="third-left border"></div>
+            <div class="third-right">
+                <div class="third-right-top border"></div>
+                <div class="third-right-bottom border"></div>
+            </div>
+        </div>
+        <div class="fourth-row-box">
+            <div class="item-box1">
+                <div class="fourth-item1 border"></div>
+                <div class="fourth-item2 border"></div>
+            </div>
+            <div class="item-box2">
+                <div class="fourth-item3 border"></div>
+                <div class="fourth-item4 border"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
