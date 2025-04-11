@@ -39,17 +39,14 @@
 
         .third-row-box{
             width: 800px;
-            height: 200px;
             display: flex;
         }
         .third-left{
             width: 30%;
-            height: 200px;
             background-color: lightblue;
         }
         .third-right{
             width: 70%;
-            height: 200px;
             display: flex;
             flex-direction: column;
         }
@@ -122,17 +119,19 @@
             }
             .third-left{
                 width: 100%;
+                height: 100px;
             }
             .third-right{
                 width: 100%;
-                flex-direction: row;
             }
             .third-right-top, .third-right-bottom{
-                width: 50%;
+                width: 100%;
             }
         }
         @media screen and (max-width:350px){
-            
+            .third-row-box{
+                flex-direction: column;
+            }
             .third-right{
                 flex-direction: column;    
             }
