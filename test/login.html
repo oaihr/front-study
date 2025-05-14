@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 500px;
+            height: 400px;
+            background-color: #2e313d;
+            margin: 0 auto;
+            margin-top: 50px;
+            overflow: auto;
+        }
+        .signup-login{
+            background-color: #6f7486;
+            width: 400px;
+            height: 40px;
+            margin: 0px auto;
+            margin-top: 20px;
+            display: flex;
+        }
+        .signup{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .login{
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .signup:hover, .login:hover{
+            background-color: green;
+            color: white;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .welcome{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            font-size: 1.5rem;
+            color: white;
+        }
+        .signup-data{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .sign-data{
+            width: 400px;
+            height: 30px;
+            margin: 10px;
+            
+        }
+        .signup-data input[type="address"], .signup-data input[type="password"]{
+            background-color: #2e313d;
+            border: 1px solid #6f7486;
+            
+        }
+        .loginbutton{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .button{
+            width: 400px;
+            height: 50px;
+            background-color: green;
+            color: white;
+            font-size: 25px;
+        }
+        .button:hover{
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="signup-login">
+            <div class="signup"><a href=signup.html>Sign up</a></div>
+            <div class="login"><a href=login.html>Log in</a></div>
+        </div>
+        <div class="welcome">Welcom Back!</div>
+        <div class="signup-data">
+            <input type="address" placeholder=" Email Address*" class="sign-data">
+            <input type="password" placeholder=" Password*" class="sign-data">
+        </div>
+            <div class="loginbutton">
+                <form action="main.html">
+                    <button type="submit" class="button">LOG IN</button>
+                </form>
+            </div>
+    </div>
+</body>
+</html>
