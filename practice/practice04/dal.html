@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    달식당 <span onclick="increaseCnt()">좋아요♡</span> <span id="cnt">0</span>
+    <!-- <h1 id="dal">달식당 <span id="heart">좋아요♡</span> 0</h1> -->
+
+    <script>
+        let count = 0;
+
+        function increaseCnt(){
+            count++;
+            document.getElementById('cnt').textContent = count;            
+        }
+
+        //숫자 부분만 span태그로 감싸는 게 포인트
+        
+        // const heart = document.getElementById('heart');
+        // let target = 1;
+        // heart.addEventListener('click', ()=>{
+        //     let str = document.getElementById('dal').innerText;            
+        //     document.getElementById('dal').innerText = str.replace(, target);
+        //     target ++;
+        // });
+    </script>
+</body>
+</html>
