@@ -27,15 +27,6 @@
         id.value = "";
         pw.value = "";    
     }
-
-    // input 요소들에서 엔터키 누르면 submit 막기    
-    input.forEach(input=> {
-        input.addEventListener('keydown', function(event){
-            if(event.key === "Enter"){
-                event.preventDefault();
-            }   
-        })
-    })        
     
     //id에서 엔터치면 패스워드로 포커스
     id.addEventListener('keydown', function(event){
