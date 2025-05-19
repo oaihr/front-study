@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="formLogin">
+        <input type="text" id="loginId" placeholder="아이디"><br>
+        <input type="password" id="loginPw" placeholder="비밀번호"><br>
+        <!-- <button id="btnLogin" onclick="tryLogin()">로그인 시도</button><br> -->
+         <button id="btnLogin" type="submit">로그인 시도</button><br>
+    </form>    
+    
+    <script>
+    //코드작성
+    const id = document.getElementById('loginId');
+    const pw = document.getElementById('loginPw');
+    const button = document.getElementById('btnLogin');
+    const input = document.querySelectorAll("input");
+    const formLogin = document.getElementById('formLogin');
+    
+    //로그인 버튼 누르면 id, pw 입력된 텍스트 없애기  
+
+    function tryLogin(){        
+        id.value = "";
+        pw.value = "";    
+    }
+
+    // input 요소들에서 엔터키 누르면 submit 막기    
+    input.forEach(input=> {
+        input.addEventListener('keydown', function(event){
+            if(event.key === "Enter"){
+                event.preventDefault();
+            }   
+        })
+    })        
+    
+    //id에서 엔터치면 패스워드로 포커스
+    id.addEventListener('keydown', function(event){
+        if(event.keyCode == 13){
+            event.preventDefault();
+            pw.focus();
+        }
+    })
+    
+    //pw에서 엔터치면 submit
+    
+    pw.addEventListener('keydown', function(event){
+        if(event.keyCode == 13){
+            event.preventDefault();
+            // tryLogin();
+            
+            // 로그인 버튼 클릭 이벤트 발생
+            document.getElementById('btnLogin').click();
+        }
+    })
+    
+    formLogin.addEventListener('submit', (event)=>{
+        event.preventDefault();
+
+        id.value = id.value.trim();
+        pw.value = pw.value.trim();
+
+        if(id.value == ''){
+            alert('아이디 입력해주세요');
+            id.focus();
+            return;
+        }
+        if(pw.value == ''){
+            alert('비밀번호 입력해주세요');
+            pw.focus();
+            return;
+        }
+
+        // 검증 후 submit 호출
+        //formLogin.submit();
+        //submit 실행된거처럼 보이게 -> 아이디 비번 공백으로
+        tryLogin();
+    })
+    </script>
+</body>
+</html>
