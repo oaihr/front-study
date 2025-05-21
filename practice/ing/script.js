@@ -9,7 +9,7 @@ let currentTxt = txtArr[index].split("");
     const spanEl = document.querySelector("main h2 span");
     const txtArr = ['Web Publisher', 'Front-End Developer', 'Web UI Designer', 'UX Designer', 'Back-End Developer'];
     let index = 0;
-    let currentTxt = textArr[index].split("");
+    let currentTxt = txtArr[index].split("");
     function writeTxt(){
         spanEl.textContent += currentTxt.shift();
         if(currentTxt.length !== 0){
@@ -35,17 +35,17 @@ let currentTxt = txtArr[index].split("");
 })();
 
 // 스크롤 이벤트 추가
-/* const headerEl = document.querySelector("header");
+const headerEl = document.querySelector("header");
 window.addEventListener('scroll', function(){
-    const browserScrollY = this.window.pageXOffset;
+    const browserScrollY = this.window.pageYOffset;
     if(browserScrollY > 0){
         headerEl.classList.add("active");
     }else{
         headerEl.classList.remove("active");
     }
 });
- */
-const headerEl = document.querySelector("header");
+
+/* const headerEl = document.querySelector("header");
 window.addEventListener('scroll', function(){
     requestAnimationFrame(ScrollCheck);
 });
@@ -56,7 +56,7 @@ function ScrollCheck(){
     }else{
         headerEl.classList.remove("active");
     }
-}
+} */
 
 // 애니메이션 스크롤 이동
 const animationMove = function(selector){
